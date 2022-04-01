@@ -1,0 +1,133 @@
+.Nav {
+    width: 100vw;
+    & > .Nav_logo {
+        margin-top: 10px;
+        margin-left: 15px;
+        margin-bottom: 10px;
+        font-size: 2.8rem;
+        font-weight: 700;
+
+        @include sm {
+            width: 50%;
+            float: left;
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+    & > .Nav_open_icon {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 3.5rem;
+
+        @include sm {
+            display: none;
+        }
+    }
+    & > .Nav_close_icon {
+        display: none;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 3.5rem;
+    }
+    & > .Nav_leftside {
+        display: none;
+        width: 25%;
+        margin-top: 20px;
+        & > .leftside_user {
+            margin-left: 20px;
+            font-size: 2.5rem;
+        }
+        & > .leftside_heart {
+            margin-left: 20px;
+            font-size: 2.5rem;
+        }
+
+        @include sm {
+            display: block;
+            float: left;
+        }
+    }
+    & > .Nav_rightside {
+        display: none;
+        width: 25%;
+        margin-top: 20px;
+        text-align: right;
+        & > .rightside_cart {
+            margin-right: 20px;
+            font-size: 2.5rem;
+        }
+        & > .rightside_search {
+            margin-right: 20px;
+            font-size: 2.5rem;
+        }
+
+        @include sm {
+            display: block;
+            float: left;
+        }
+    }
+    & > .Nav_menu {
+        display: none;
+        width: 100vw !important;
+        text-align: center;
+        background-color: rgb(231, 231, 231);
+        clear: both;
+        & > .menu_list {
+            list-style: none;
+            padding: 0;
+            & > .list_item {
+                display: inline-block;
+                margin: 10px;
+                font-size: 2rem;
+            }
+        }
+
+        @include sm {
+            display: block;
+        }
+    }
+}
+
+.opened {
+    height: 100vh;
+    & > .Nav_open_icon {
+        display: none;
+    }
+    & > .Nav_close_icon {
+        display: block;
+    }
+    & > .Nav_leftside {
+        display: block;
+        width: 50%;
+        position: absolute;
+        top: 100px;
+        left: 50px;
+    }
+    & > .Nav_rightside {
+        display: block;
+        width: 50%;
+        position: absolute;
+        top: 100px;
+        right: 50px;
+    }
+    & > .Nav_logo {
+        width: 100%;
+        text-align: center;
+    }
+    & > .Nav_menu {
+        display: block;
+        position: relative;
+        top: 150px;
+        background-color: white;
+        & > .menu_list {
+            & > .list_item {
+                display: block;
+                margin-top: 20px;
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
