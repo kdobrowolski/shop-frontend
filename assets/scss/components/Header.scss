@@ -1,0 +1,52 @@
+.header {
+    width: 100vw;
+    height: 350px;
+    position: relative;
+    bottom: 10px;
+    background-image: url('~/assets/img/header.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+
+    & > .header_banner {
+        position: relative;
+        top: 50px;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        & > .banner_headline {
+            margin: 0;
+            font-size: 3rem;
+            color: $primary-color;
+        }
+        & > .banner_underline {
+            color: white;
+            font-size: 2rem;
+        }
+    }
+    & > .header_categories {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        & > .categories_list {
+            padding: 0;
+            list-style: none;
+            & > .list_item {
+                display: block;
+                width: 25%;
+                float: left;
+                padding: 15px 0 15px 0;
+                text-align: center;
+                font-size: 1.5rem;
+                color: white;
+                outline-style: solid;
+                outline-color: rgb(46, 46, 46);
+            }
+        }
+    }
+
+    @include md {
+        height: 500px;
+    }
+}
