@@ -1,0 +1,41 @@
+.Product_card {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    & > .card_container {
+        width: 90%;
+        margin: 0 auto;
+        & > .container_image {
+            width: 100%;
+            height: 200px;
+        }
+        & > .container_title {
+            margin: 0;
+            font-size: 2rem;
+        }
+        & > .container_price {
+            margin: 0;
+            font-size: 1.7rem;
+            color: rgb(153, 153, 153);
+        }
+        & > .container_rate {
+            & > .rate_star--filled {
+                color: #fc9157;
+            }
+        }
+    }
+
+    @include sm {
+        width: 50%;
+        float: left;
+    }
+    @include md {
+        width: 33.33%;
+    }
+    @include lg {
+        width: 25%;
+    }
+    @include xxl {
+        width: 20%;
+    }
+}

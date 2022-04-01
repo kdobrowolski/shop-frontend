@@ -2,6 +2,7 @@
     <main class="Shop_layout">
         <Nav />
         <Header />
+        <Nuxt />
     </main>
 </template>
 
